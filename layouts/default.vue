@@ -1,5 +1,5 @@
 <template>
-	<div>
+  <div>
     <!-- Overlay Section -->
     <div v-if="!isLoaded" class="overlay">
       <div class="overlayDoor"></div>
@@ -31,11 +31,11 @@
     </div> -->
 
     <div>
-		<Navbar />
-		<slot />
-		<Footer />
+      <Navbar />
+      <slot />
+      <Footer />
     </div>
-	</div>
+  </div>
 </template>
 
 <script setup>
