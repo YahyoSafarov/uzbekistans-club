@@ -125,19 +125,60 @@
           </li>
 
           <li class="nav__item">
-            <NuxtLink to="" class="nav__link">
-              <i class="ri-arrow-right-up-line"></i>
-              <span>Residents</span>
-            </NuxtLink>
-          </li>
-
-          <li class="nav__item">
             <NuxtLink to="/media-residents" class="nav__link">
               <i class="ri-arrow-right-up-line"></i>
               <span>Media Residents</span>
             </NuxtLink>
           </li>
         </ul>
+
+        <!-- Close button -->
+        <div class="nav__close" @click="toggleMenu">
+          <i class="ri-close-large-line"
+            ><img src="../assets/images/close-line.png" alt="no image"
+          /></i>
+        </div>
+
+        <div class="nav__social">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="nav__social-link"
+          >
+            <i class="ri-instagram-line"></i>
+          </a>
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+            class="nav__social-link"
+          >
+            <i class="ri-github-line"></i>
+          </a>
+
+          <a
+            href="https://dribbble.com/"
+            target="_blank"
+            class="nav__social-link"
+          >
+            <i class="ri-dribbble-line"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="nav__social-link"
+          >
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Toggle button -->
+      <div class="nav__toggle" @click="toggleMenu">
+        <i class="ri-menu-line"
+          ><img src="../assets/images/menu-icon.png" alt="no image"
+        /></i>
       </div>
     </nav>
   </header>
@@ -274,6 +315,7 @@ a {
     visibility: hidden;
     transition: transform 0.4s ease-out, visibility 0.4s;
   }
+
   .nav__item:nth-child(1) {
     transition-delay: 0.1s;
   }
