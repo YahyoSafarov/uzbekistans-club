@@ -33,8 +33,8 @@
       <div class="flex flex-col">
         <div v-for="items in text" :key="items">
           <div class="text-white flex flex-col">
-            <NuxtLink :to="`/video/${items.title.toLowerCase()}`">
-              <h1 class="text_h1">{{ items.name }}</h1>
+            <NuxtLink :to='`/products/${items.title.toLowerCase()}/${items.id}`'>
+              <h1 class="text_h1">{{ items.name == 'OZBEKISTONLIK' ? "O'ZBEKISTONLIK" : items.name }}</h1>
               <p class="text_p">{{ items.title }}</p>
             </NuxtLink>
           </div>
@@ -95,24 +95,24 @@ fetchYouTubeVideoTitle(videoId, apiKey)
 
 const text = [
   {
-    id: 1,
+    id: 11,
     name: "O'zbekistonlik. Students | Episode 1",
     title: "STUDENTS",
   },
   {
     id: 2,
     name: "O'zbekistonlik | Episode 3 | Official Teaser | (4K)",
-    title: "O'ZBEKISTONLIK",
+    title: "OZBEKISTONLIK",
   },
   {
     id: 3,
     name: "O'zbekistonlik | Episode 2",
-    title: "O'ZBEKISTONLIK",
+    title: "OZBEKISTONLIK",
   },
   {
     id: 4,
     name: "O'zbekistonlik | Episode 2 | Official Teaser",
-    title: "O'ZBEKISTONLIK",
+    title: "OZBEKISTONLIK",
   },
 ];
 </script>

@@ -20,7 +20,7 @@
 									<button
 										:class="{ 'btn-active': activeFilter === 'ozbekistonlik' }"
 										class="btn"
-										@click="filterGallery('ozbekistonlik')"
+										@click="filterGallery('uzbekistan')"
 									></button>
 									<span>O'zbekistonlik</span>
 								</div>
@@ -105,22 +105,22 @@ const images = ref([
 	{
 		id: 1,
 		src: 'https://uzbekistans.club/media/thumbnails/photo_2023-10-18_00-00-27.jpg',
-		category: 'ozbekistonlik',
+		category: 'uzbekistan',
 	},
 	{
 		id: 2,
 		src: 'https://i.ytimg.com/vi/p5p0oj7anpc/maxresdefault.jpg',
-		category: 'ozbekistonlik',
+		category: "uzbekistan",
 	},
 	{
 		id: 3,
 		src: 'https://i.ytimg.com/vi/ZyeQWD-qS1U/sddefault.jpg?v=6447b9b0',
-		category: 'ozbekistonlik',
+		category: 'uzbekistan',
 	},
 	{
 		id: 4,
 		src: 'https://uzbekistans.club/media/thumbnails/episode_posterssss.jpg',
-		category: 'ozbekistonlik',
+		category: 'uzbekistan',
 	},
 	{
 		id: 5,
