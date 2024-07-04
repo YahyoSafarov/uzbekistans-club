@@ -1,6 +1,6 @@
 <template>
-  <header class="header bg-[#1B1B1B] z-[1000]" id="header">
-    <nav class="nav mx-auto !container">
+  <header class="header" id="header">
+    <nav class="nav container">
       <NuxtLink to="/" class="nav__logo">
         <svg
           data-v-00b951b5=""
@@ -111,80 +111,41 @@
           </li>
 
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <NuxtLink to="/projects" class="nav__link">
               <i class="ri-arrow-right-up-line"></i>
               <span>Projects</span>
-            </a>
+            </NuxtLink>
           </li>
 
           <li class="nav__item">
-            <a href="/master-residents" class="nav__link">
+            <NuxtLink to="/master-residents" class="nav__link">
               <i class="ri-arrow-right-up-line"></i>
               <span>Master Residents</span>
-            </a>
+            </NuxtLink>
           </li>
 
           <li class="nav__item">
-            <a href="/media-residents" class="nav__link">
+            <NuxtLink to="" class="nav__link">
+              <i class="ri-arrow-right-up-line"></i>
+              <span>Residents</span>
+            </NuxtLink>
+          </li>
+
+          <li class="nav__item">
+            <NuxtLink to="/media-residents" class="nav__link">
               <i class="ri-arrow-right-up-line"></i>
               <span>Media Residents</span>
-            </a>
+            </NuxtLink>
           </li>
         </ul>
-
-        <!-- Close button -->
-        <div class="nav__close" @click="toggleMenu">
-          <i class="ri-close-large-line"
-            ><img src="../assets/images/close-line.png" alt="no image"
-          /></i>
-        </div>
-
-        <div class="nav__social">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            class="nav__social-link"
-          >
-            <i class="ri-instagram-line"></i>
-          </a>
-
-          <a
-            href="https://github.com/"
-            target="_blank"
-            class="nav__social-link"
-          >
-            <i class="ri-github-line"></i>
-          </a>
-
-          <a
-            href="https://dribbble.com/"
-            target="_blank"
-            class="nav__social-link"
-          >
-            <i class="ri-dribbble-line"></i>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            class="nav__social-link"
-          >
-            <i class="ri-linkedin-box-line"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Toggle button -->
-      <div class="nav__toggle" @click="toggleMenu">
-        <i class="ri-menu-line"
-          ><img src="../assets/images/menu-icon.png" alt="no image"
-        /></i>
       </div>
     </nav>
   </header>
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 const menuVisible = ref(false);
 
 const toggleMenu = () => {
@@ -193,33 +154,41 @@ const toggleMenu = () => {
 </script>
 
 <style lang="scss" scoped>
+/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap");
 
+/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
+  /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
 
+  /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat Alternates", sans-serif;
   --h1-font-size: 1.5rem;
   --normal-font-size: 0.938rem;
 
+  /*========== Font weight ==========*/
   --font-regular: 400;
   --font-medium: 500;
 
+  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
+/*========== Responsive typography ==========*/
 @media screen and (min-width: 1150px) {
   :root {
     --normal-font-size: 1rem;
   }
 }
 
+/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -244,12 +213,21 @@ a {
   text-decoration: none;
 }
 
+/*=============== REUSABLE CSS CLASSES ===============*/
+// .container {
+//   max-width: 1120px;
+//   margin-inline: 1.5rem;
+// }
+
+/*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
   width: 100%;
   height: 4.5rem;
   top: 0;
   left: 0;
+  background-color: #000;
+  z-index: 999;
 }
 
 .nav {
@@ -257,7 +235,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
 }
 
 .nav__logo {
@@ -297,7 +274,6 @@ a {
     visibility: hidden;
     transition: transform 0.4s ease-out, visibility 0.4s;
   }
-
   .nav__item:nth-child(1) {
     transition-delay: 0.1s;
   }
@@ -360,7 +336,7 @@ a {
   bottom: -6px;
   width: 0;
   height: 2px;
-  background-color: var(--white-color);
+  // background-color: white;
   transition: width 0.4s ease-out;
 }
 
@@ -414,8 +390,13 @@ a {
   transform: translateX(0);
 }
 
+/*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+
   .nav {
     height: calc(var(--header-height) + 2rem);
   }
