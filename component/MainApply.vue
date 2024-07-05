@@ -3,23 +3,17 @@
     <div>
       <div class="bg_image">
         <div class="text_h2">
-          <h2>
-            Become a resident
-          </h2>
-
-
+          <h2>Become a resident</h2>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
-.bg_image{
+.bg_image {
   background-image: url("https://uzbekistans.club/images/residents.png");
   background-position: center;
   background-size: cover;
@@ -28,7 +22,7 @@
   border: 2px solid #e3b269;
   border-radius: 12px;
 }
-.text_h2{
+.text_h2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,5 +30,12 @@
   font-size: 20px;
   color: white;
   font-weight: 600;
+}
+
+@media (max-width: 620px) {
+  .container {
+    max-width: 620px;
+    padding: 8px;
+  }
 }
 </style>

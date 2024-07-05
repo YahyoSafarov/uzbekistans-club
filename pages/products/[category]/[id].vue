@@ -194,5 +194,11 @@ const image = images.find(
 </script>
 
 <style scoped>
-/* Add your styles here */
+@media (max-width: 530px) {
+  .container {
+    max-width: 520px;
+    padding: 10px;
+    margin-top: 90px;
+  }
+}
 </style>

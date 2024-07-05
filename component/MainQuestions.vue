@@ -2,62 +2,70 @@
   <div class="container">
     <div>
       <div>
-        <h1 class="text_h1">
-          TOP QUESTIONS
-        </h1>
+        <h1 class="text_h1">TOP QUESTIONS</h1>
       </div>
 
       <div>
         <div class="card">
-
-            <div class="img_i">
-              <div class="col-md-6 col-lg-4">
-                <div class="item animated wow fadeIn">
-                  <img src="https://uzbekistans.club/media/post_pics/1280%D1%85720_master.jpg" alt="">
-                  <div class="overlay fade-overlay">
-                    <div class="text"> Who are master residents?y</div>
-                  </div>
-                  <div class="overlay fade-overlay"></div>
+          <div class="img_i">
+            <div class="col-md-6 col-lg-4">
+              <div class="item animated wow fadeIn">
+                <img
+                  src="https://uzbekistans.club/media/post_pics/1280%D1%85720_master.jpg"
+                  alt=""
+                />
+                <div class="overlay fade-overlay">
+                  <div class="text">Who are master residents?y</div>
                 </div>
+                <div class="overlay fade-overlay"></div>
               </div>
             </div>
+          </div>
 
-            <div class="img_i">
-              <div class="col-md-6 col-lg-4">
-                <div class="item animated wow fadeIn">
-                  <img src="https://uzbekistans.club/media/post_pics/1280%D1%85720_master.jpg" alt="">
-                  <div class="overlay fade-overlay">
-                    <div class="text"> Who are master residents?</div>
-                  </div>
-                  <div class="overlay fade-overlay"></div>
+          <div class="img_i">
+            <div class="col-md-6 col-lg-4">
+              <div class="item animated wow fadeIn">
+                <img
+                  src="https://uzbekistans.club/media/post_pics/1280%D1%85720_master.jpg"
+                  alt=""
+                />
+                <div class="overlay fade-overlay">
+                  <div class="text">Who are master residents?</div>
                 </div>
+                <div class="overlay fade-overlay"></div>
               </div>
             </div>
+          </div>
 
-            <div class="img_i">
-              <div class="col-md-6 col-lg-4">
-                <div class="item animated wow fadeIn">
-                  <img src="https://uzbekistans.club/media/post_pics/1280%D1%85720_master.jpg" alt="">
-                  <div class="overlay fade-overlay">
-                    <div class="text"> Who are master residents?y</div>
-                  </div>
-                  <div class="overlay fade-overlay"></div>
+          <div class="img_i">
+            <div class="col-md-6 col-lg-4">
+              <div class="item animated wow fadeIn">
+                <img
+                  src="https://uzbekistans.club/media/post_pics/1280%D1%85720_master.jpg"
+                  alt=""
+                />
+                <div class="overlay fade-overlay">
+                  <div class="text">Who are master residents?y</div>
                 </div>
+                <div class="overlay fade-overlay"></div>
               </div>
             </div>
+          </div>
 
-            <div class="img_i">
-              <div class="col-md-6 col-lg-4">
-                <div class="item animated wow fadeIn">
-                  <img src="https://uzbekistans.club/media/post_pics/1280%D1%85720_master.jpg" alt="">
-                  <div class="overlay fade-overlay">
-                    <div class="text"> Who are master residents?</div>
-                  </div>
-                  <div class="overlay fade-overlay"></div>
+          <div class="img_i">
+            <div class="col-md-6 col-lg-4">
+              <div class="item animated wow fadeIn">
+                <img
+                  src="https://uzbekistans.club/media/post_pics/1280%D1%85720_master.jpg"
+                  alt=""
+                />
+                <div class="overlay fade-overlay">
+                  <div class="text">Who are master residents?</div>
                 </div>
+                <div class="overlay fade-overlay"></div>
               </div>
             </div>
-
+          </div>
         </div>
       </div>
     </div>
@@ -73,37 +81,40 @@ const question = [
   },
   {
     id: 2,
-    image: "https://uzbekistans.club/media/post_pics/%D0%91%D0…%8F%D0%BD%D0%BD%D1%8B%D0%B8-3_qbm9MCJ_9gJptLD.jpg",
+    image:
+      "https://uzbekistans.club/media/post_pics/%D0%91%D0…%8F%D0%BD%D0%BD%D1%8B%D0%B8-3_qbm9MCJ_9gJptLD.jpg",
     name: " Who are master residents?",
   },
   {
     id: 3,
-    image: "\thttps://uzbekistans.club/media/post_pics/%D0%91%D0…%8F%D0%BD%D0%BD%D1%8B%D0%B8-4_xwyEtPU_kJZuelt.jpg",
+    image:
+      "\thttps://uzbekistans.club/media/post_pics/%D0%91%D0…%8F%D0%BD%D0%BD%D1%8B%D0%B8-4_xwyEtPU_kJZuelt.jpg",
     name: " Who are master residents?",
   },
   {
     id: 4,
-    image: "\thttps://uzbekistans.club/media/post_pics/%D0%91%D0…7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9-1.jpg",
+    image:
+      "\thttps://uzbekistans.club/media/post_pics/%D0%91%D0…7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9-1.jpg",
     name: " Who are master residents?",
   },
-]
+];
 </script>
 
 <style lang="scss" scoped>
-.card{
+.card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
-.text_h1{
+.text_h1 {
   margin-top: 25px;
   font-size: 45px;
   color: white;
-  font-weight: 700
+  font-weight: 700;
 }
-.text_t{
+.text_t {
   //border: 2px solid white;
   opacity: 1;
   width: 100%;
@@ -112,7 +123,7 @@ const question = [
   position: relative;
   transition: opacity 0.1s 0s;
 }
-.text_t h2{
+.text_t h2 {
   font-size: 22px;
   font-weight: 600;
 }
@@ -177,7 +188,6 @@ const question = [
   right: 0;
 }
 
-
 .fade-overlay {
   height: 100%;
   opacity: 0;
@@ -207,14 +217,13 @@ const question = [
   text-align: center;
 }
 
-
 .title-overlay {
   height: auto;
   top: auto;
   opacity: 1;
 }
 
-.img_i img{
+.img_i img {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -222,20 +231,30 @@ const question = [
   object-fit: cover;
   //filter: brightness(70%);
   //transition: all .8s cubic-bezier(.499,.05,.55,.55);
-  transition:  0.8s, background-position 0.8s;
+  transition: 0.8s, background-position 0.8s;
 }
 
-@media(max-width: 1142px){
-  .card{
+@media (max-width: 1142px) {
+  .card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media(max-width: 860px){
-  .card{
+@media (max-width: 860px) {
+  .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    max-width: 560px;
+    padding: 0;
+  }
+  .text_h1 {
+    font-size: 25px;
   }
 }
 </style>

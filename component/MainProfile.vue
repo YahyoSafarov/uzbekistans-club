@@ -161,6 +161,13 @@ const profile = [
   }
 }
 @media (max-width: 545px) {
+  .container {
+    padding: 2px;
+    max-width: 545px;
+  }
+  .text_h1 {
+    font-size: 35px;
+  }
   .media_g {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

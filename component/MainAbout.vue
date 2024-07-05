@@ -33,9 +33,19 @@
       <div class="flex flex-col">
         <div v-for="items in text" :key="items">
           <div class="text-white flex flex-col">
-            <NuxtLink :to='`/products/${items.title.toLowerCase()}/${items.id}`'>
-              <h1 class="text_h1">{{ items.name == 'OZBEKISTONLIK' ? "O'ZBEKISTONLIK" : items.name }}</h1>
-              <p class="text_p">{{ items.title }}</p>
+            <NuxtLink
+              :to="`/products/${items.title.toLowerCase()}/${items.id}`"
+            >
+              <div class="text_g">
+                <h1 class="text_h1">
+                  {{
+                    items.name == "OZBEKISTONLIK"
+                      ? "O'ZBEKISTONLIK"
+                      : items.name
+                  }}
+                </h1>
+                <p class="text_p">{{ items.title }}</p>
+              </div>
             </NuxtLink>
           </div>
         </div>
@@ -118,7 +128,7 @@ const text = [
 </script>
 
 <style lang="scss" scoped>
-.text_c{
+.text_c {
   display: flex;
   align-items: start;
   font-size: 45px;
@@ -219,10 +229,26 @@ const text = [
   padding: 50px 0;
 }
 
-@media(max-width: 820px){
-  .media_f{
+@media (max-width: 820px) {
+  .media_f {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 689px) {
+  .container {
+    max-width: 690px;
+  }
+}
+
+@media (max-width: 556px) {
+  .container {
+    padding: 0px;
+    max-width: 556px;
+  }
+  .text_c {
+    font-size: 25px;
   }
 }
 </style>
