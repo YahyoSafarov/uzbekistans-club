@@ -12,7 +12,7 @@
             <div class="item animated wow fadeIn">
               <img
                 :src="banner.banner_thumbnail.medium"
-                class="rounded-lg m-auto w-full h-full object-cover"
+                class="rounded-lg m-auto object-cover"
                 :alt="`Banner ${banner.id}`"
               />
               <div class="overlay fade-overlay"></div>
@@ -169,6 +169,10 @@ const text = [
   position: relative;
   overflow: hidden;
   margin: 20px 0;
+  img {
+    width: 1000px;
+    height: 100%;
+  }
 }
 
 .item:hover .overlay {
