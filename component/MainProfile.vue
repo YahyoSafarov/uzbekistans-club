@@ -54,7 +54,7 @@ const profile = [
   {
     id: 4,
     img: "\thttps://uzbekclub.xn--h28h.uz/media/cache/bf/a4/bfa499c5a0749b6bd69842e7aba8fc8a.jpg",
-    name: "Muzaffar Jalolov's truths of life",
+    name: "Behzod Abduraimov. A global citizen",
   },
   {
     id: 5,
