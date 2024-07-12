@@ -1,52 +1,65 @@
 <template>
-  <div class="container">
-    <h1 class="text_c">LATEST EPISODES</h1>
-    <div class="flex gap-5 p-3 items-center justify-center media_f">
-      <div
-        v-for="banner in mobileBanners.slice(0, 1)"
-        :key="banner.id"
-        class="p-2 hover:bg-[#222] rounded-lg cursor-pointer duration-150"
-      >
-        <NuxtLink :href="banner.link" target="_blank" rel="noopener noreferrer">
-          <div class="col-md-6 col-lg-4">
-            <div class="item animated wow fadeIn">
-              <img
-                :src="banner.banner_thumbnail.medium"
-                class="rounded-lg m-auto object-cover"
-                :alt="`Banner ${banner.id}`"
-              />
-              <div class="overlay fade-overlay"></div>
+  <div class="bg_image">
+    <div class="container">
+      <h1 class="text_c">LATEST EPISODES</h1>
+      <div>
+        <img
+          src="../assets/images/uzbekistan-absolute-image-2.jpg"
+          class="abs_image"
+          alt="no image"
+        />
+      </div>
+      <div class="flex gap-5 p-3 items-center justify-center media_f">
+        <div
+          v-for="banner in mobileBanners.slice(0, 1)"
+          :key="banner.id"
+          class="p-2 hover:rounded-lg cursor-pointer duration-150"
+        >
+          <NuxtLink
+            :href="banner.link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="col-md-6 col-lg-4">
+              <div class="item animated wow fadeIn">
+                <img
+                  :src="banner.banner_thumbnail.medium"
+                  class="rounded-lg m-auto object-cover"
+                  :alt="`Banner ${banner.id}`"
+                />
+                <div class="overlay fade-overlay"></div>
+              </div>
             </div>
-          </div>
-          <!-- <p class="text-primary text-[16px] text-center mt-2">
+            <!-- <p class="text-primary text-[16px] text-center mt-2">
             {{ banner.id }}
           </p> -->
-        </NuxtLink>
-      </div>
-      <!-- <div v-for="banner in mobileBanners.slice(0, 4)" :key="banner.id">
+          </NuxtLink>
+        </div>
+        <!-- <div v-for="banner in mobileBanners.slice(0, 4)" :key="banner.id">
         {{ banner.id }}
       </div> -->
-      <!-- <div v-if="videoTitle" class="text-center mt-5">
+        <!-- <div v-if="videoTitle" class="text-center mt-5">
       <h2>Video Title: {{ videoTitle }}</h2>
     </div> -->
 
-      <div class="flex flex-col">
-        <div v-for="items in text" :key="items">
-          <div class="text-white flex flex-col">
-            <NuxtLink
-              :to="`/products/${items.title.toLowerCase()}/${items.id}`"
-            >
-              <div class="text_g">
-                <h1 class="text_h1">
-                  {{
-                    items.name == "OZBEKISTONLIK"
-                      ? "O'ZBEKISTONLIK"
-                      : items.name
-                  }}
-                </h1>
-                <p class="text_p">{{ items.title }}</p>
-              </div>
-            </NuxtLink>
+        <div class="flex flex-col">
+          <div v-for="items in text" :key="items">
+            <div class="text-white flex flex-col">
+              <NuxtLink
+                :to="`/products/${items.title.toLowerCase()}/${items.id}`"
+              >
+                <div class="text_g">
+                  <h1 class="text_h1">
+                    {{
+                      items.name == "OZBEKISTONLIK"
+                        ? "O'ZBEKISTONLIK"
+                        : items.name
+                    }}
+                  </h1>
+                  <p class="text_p">{{ items.title }}</p>
+                </div>
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>
@@ -128,13 +141,23 @@ const text = [
 </script>
 
 <style lang="scss" scoped>
+// .bg_image {
+//   background-color: #111;
+// }
+.abs_image {
+  position: absolute;
+  margin-left: -195px;
+  top: 650px;
+}
 .text_c {
+  position: relative;
   display: flex;
   align-items: start;
   font-size: 45px;
   font-weight: 700;
   margin-top: 100px;
   color: #fff;
+  z-index: 99;
 }
 .text_h1 {
   font-size: 19px;

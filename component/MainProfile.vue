@@ -5,6 +5,14 @@
         <h1>PROFILE</h1>
       </div>
 
+      <div>
+        <img
+          src="../assets/images/uzbekistan-absolute-image-2.jpg"
+          class="abs_image"
+          alt="no image"
+        />
+      </div>
+
       <div class="flex items-center justify-center gap-4 media_g">
         <div v-for="index in profile" :key="index">
           <div class="col-md-6 col-lg-4">
@@ -66,10 +74,18 @@ const profile = [
   padding-top: 55px;
   padding-bottom: 45px;
 }
+
+.abs_image {
+  position: absolute;
+  margin-left: -195px;
+  margin-top: -160px;
+}
 .text_h1 {
+  position: relative;
   font-size: 45px;
   color: white;
   font-weight: 700;
+  z-index: 99;
 }
 
 .text_p {

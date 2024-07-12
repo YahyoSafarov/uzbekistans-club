@@ -86,7 +86,7 @@
 
 <style lang="scss" scoped>
 .bg {
-  background: #1b1b1b;
+  background: #111;
   padding-bottom: 70px;
   padding-top: 50px;
   //height: 750px;
@@ -99,9 +99,11 @@
 }
 
 h1 {
+  position: relative;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 38px;
   text-align: center;
+  z-index: 99;
 }
 
 .content > div {
